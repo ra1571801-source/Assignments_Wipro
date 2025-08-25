@@ -1,0 +1,80 @@
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 24px 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.average-rating {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2c3e50; /* dark slate blue */
+  letter-spacing: 0.03em;
+}
+
+.movie-grid {
+  padding: 24px 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  background: #f5f9fc; /* very light blue-gray */
+  border-radius: 12px;
+  box-shadow: inset 0 0 12px #dce7f1;
+}
+
+.movie-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #ffffff; /* pure white */
+  box-shadow: 0 6px 20px rgba(41, 128, 185, 0.15); /* soft blue shadow */
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(41, 128, 185, 0.3);
+}
+
+mat-card img {
+  height: 280px;
+  width: 100%;
+  object-fit: cover;
+  border-bottom: 1px solid #d1dce7; /* lighter border */
+  transition: filter 0.3s ease;
+  background-color: #ecf0f1; /* light grey background as placeholder */
+}
+
+.movie-card:hover mat-card img {
+  filter: brightness(0.9);
+}
+
+.top-rated {
+  border: 4px solid #3498db; /* bright blue */
+  box-shadow: 0 0 14px #3498dbaa;
+  border-radius: 16px;
+}
+
+.stars {
+  color: #95a5a6; /* cool grey */
+  font-size: 1.1rem;
+  user-select: none;
+}
+
+.stars .filled {
+  color: #2980b9; /* strong blue */
+}
+
+.no-movies {
+  text-align: center;
+  margin-top: 40px;
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #7f8c8d; /* muted dark gray */
+  font-weight: 500;
+}
